@@ -700,9 +700,7 @@ i {
         position: relative;
         bottom: 100px;
     }
-
-}
-#contact{
+    #contact{
     width:300px;
     border-radius: 40px;
     padding: 15px;
@@ -717,4 +715,6 @@ i {
         justify-content: center;
         gap:20px ;
     }
+}
+
 }
