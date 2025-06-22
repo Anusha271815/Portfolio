@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #7a93d7;
+background: linear-gradient(90deg, rgba(49, 79, 163, 0.909) 0%, rgba(171, 64, 177, 0.822) 100%, rgb(236, 226, 135) 100%);
+}
+#container{
+    height: 90%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: x-large;
+    font-weight: bold;
+    color:white;
+    text-shadow: 2px black;
+    #logos{
+        display: flex;
+        gap:20px;
+    }
+    i:nth-child(1){
+        animation-name: down;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+    }
+    i:nth-child(2){
+        animation-name: down;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+        animation-delay: 0.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+    i:nth-child(3){
+        animation-name: down;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+        animation-delay: 1s;
+        opacity: 0;
+         animation-fill-mode: forwards;
+    }
+        
+    #welcome{
+        animation-name: move;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+        animation-delay:1s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+    }
+    #portfolio{
+        animation-name: up;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+        animation-delay:1.5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        transition:all;
+        transition-duration: 2s;
+    }
+    #portfolio:hover{
+        transform:scale(1.1);
+        color: rgb(255, 255, 8);
+    }
+    .open{
+        font-size: small;
+        padding:5px 10px;
+        border:1px rgba(231, 228, 228, 0.689) solid;
+        border-radius:6px;
+        background-color: rgba(249, 249, 249, 0.776);
+        animation-name:show;
+        animation-timing-function: ease-out;
+        animation-duration:1s;
+        animation-delay: 2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        text-decoration: none;
+    }
+    .open:hover{
+        background-color: rgba(249, 249, 249, 0.477);
+    }
+}
+@keyframes move{
+    from{
+        opacity:0;
+        transform: translate(-100px);
+    }
+    to{
+        opacity:100%;
+        transform: translate(0px);
+    }
+}
+@keyframes up{
+    from{
+        opacity:0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity:100%;
+        transform: translateY(0px);
+    }
+}
+@keyframes down{
+    from{
+        opacity:0;
+        transform: translate(-20px,-20px);
+    }
+    to{
+        opacity:100%;
+        transform: translateY(0px);
+    }
+}
+@keyframes show{
+    from{
+        opacity:0;
+        transform: scale(0.2);
+    }
+    to{
+        opacity:100%;
+        transform:scale(1);
+    }
+}
